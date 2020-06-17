@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AdminPessoal"
+             x:Class="AdminPessoal.MainPage" Title="Login User" BackgroundColor="#010050">
+    <!--<StackLayout Padding="0,30,0,0" BackgroundColor="#010050">
+        <Label Text="Administrador Financeiro" TextColor="#FFFFFF" Margin="0,0,0,10"
+               FontSize="24" FontAttributes="Bold,Italic" HorizontalOptions="Center"/>-->    
+        <StackLayout Padding="50,180" BackgroundColor="#FFFFFF">
+            <Label Text="E-mail:" FontSize="16" TextColor="#010050" />
+            <Entry WidthRequest="100" TextColor="#000000" Keyboard="Email" Text="{Binding Mode=OneWayToSource, Path=Email}"/>
+            <Label Text="Senha:" FontSize="16" TextColor="#010050" />
+            <Entry WidthRequest="100" TextColor="#000000" IsPassword="True" Text="{Binding Path=Password}"/>
+
+            <Button Text="OK" Command="{Binding LogUserCommand}"/>
+            <Button Text="Cancel" />
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Color="#65010050"/>
+        </StackLayout>    
+    <!--</StackLayout>-->
+</ContentPage>
